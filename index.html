@@ -9,87 +9,139 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <section class="container">
-      <div class="flex happy">Happy 😀</div>
-      <div class="flex naughty">Naughty 😋</div>
-      <div class="flex shade">Shade 😎</div>
-      <div class="flex love">Love 😍</div>
-      <div class="flex rich">Rich 🤑</div>
-      <div class="flex okay">Okay 👌</div>
-      <div class="flex sporty">Sporty ⚽️</div>
-      <div class="flex respect">Respect 🙌</div>
-      <div class="flex pray">Pray 🙏</div>
-      <div class="flex danger">Danger ☠️</div>
-    </section> -->
-    <header>
+    <header class="nav-bar">
+      <article>
+        <a href="index.html">
+          <img src="./media-file/Jenny-Img-Logo.png" class="logo" alt="logo">
+        </a>
         <nav>
-            <article>
-                <a href="index.html">
-                    <img src="dog-logo.png" class="logo" alt="logo">
-                </a>
-            </article>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <img class="menu" src="Enabled.png" alt="menu button">
+          <img class="menu" src="./media-file/Enabled.png" alt="menu button">
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
         </nav>
+      </article>
     </header>
-    <main class="main-content">
-        <section class="headline container">
-            <article class="headline-content">
-                <h1 class="primary-text">Adopt Now!<strong>At Jenny Store.</strong></h1>
-                <h3 class="support-text">Get quality pet services</h3>
-                <p>Looking for a furry friend? Browse our pet store for the best deals on <span>adorable dogs, cats, and rabbits.Your next companion is just a click away!</span></p>
+      <main>
+        <section class="headline">
+          <h1 class="primary-text">
+            <strong>Adopt Now.</strong>
+            <strong>At Jenny Store.</strong>
+          </h1>
+          <h2 class="supporting-text">Get Quality Pet Services</h2>
+          <p class="description">Looking for a furry friend? Browse our pet store for the best deals on adorable dogs, cats, and rabbits.Your next companion is just a click away!</p>
+          <button type="button">More Info</button>
+        </section>
+        <section class="pricing">
+          <h2 class="pricing-title">Pick your perfect pal</h2>
+          <p class="subtext">All pets are vaccinated and come with starter kits!</p>
+          <section class="pricing-grid">
+            <article class="price-card">
+              <p class="price"><span class="currency">$</span>50</p>
+              <h2 class="plan-header">CAT</h2>
+              <article class="ratings">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="rating-info">4.2 out of 5 stars (500+ adoptions)</p>
+              </article>
+              <ul class="features">
+                <li><span class="tick">✓</span>Vet-checked and vaccinated</li>
+                <li><span class="tick">✓</span>Starter litter box and food</li>
+                <li><span class="tick">✓</span>Microchipped and registered</li>
+              </ul>
+              <a href="#" class="cta">ADOPT NOW</a>
             </article>
+            <article class="price-card">
+              <p class="price"><span class="currency">$</span>95</p>
+              <h2 class="plan-header">DOG</h2>
+              <article class="ratings">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="rating-info">4.9 out of 5 stars (900+ adoptions)</p>
+              </article>
+              <ul class="features">
+                <li><span class="tick">✓</span>Vet-checked and vaccinated</li>
+                <li><span class="tick">✓</span>Training certificate</li>
+                <li><span class="tick">✓</span>Starter leash & food packs</li>
+                <li><span class="tick">✓</span>Free grooming for 1 month</li>
+                <li><span class="tick">✓</span>Microchipped and tagged</li>
+              </ul>
+              <a href="#" class="cta">ADOPT NOW</a>
+            </article>
+            <article class="price-card">
+              <p class="price"><span class="currency">$</span>70</p>
+              <h2 class="plan-header">RABBIT</h2>
+              <article class="ratings">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="rating-info">4.0 out of 5 stars (300+ adoptions)</p>
+              </article>
+              <ul class="features">
+                <li><span class="tick">✓</span>Vet-checked and vaccinated</li>
+                <li><span class="tick">✓</span>Starter cage and pellets</li>
+                <li><span class="tick">✓</span>Free checkup within 30 days</li>
+              </ul>
+              <a href="#" class="cta">ADOPT NOW</a>
+            </article>
+          </section>
         </section>
-        <section class="pricing-grid container">
-          <!-- <article class="socials">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          </article> -->
-          <article class="price-card cat">
-            <h2 class="plan-header">CAT</h2>
-            <p class="card-text">Our kitties🐱 are pretty awesome and also quite healthy</p>
-            <ul class="features">
-              <li>Scratch everything</li>
-              <li>Could get lost but easily found</li>
-              <li>Protect you in their little way</li>
-            </ul>
-            <p class="price">$free</p>
-            <a href="#" class="cta">Adopt Now</a>
+        <!-- About -->
+        <section class="about-page">
+          <article class="about">
+            <article class="about-content">
+              <h1 class="primary-text">About Us</h1>
+              <p class="about-text">At Jenny Store, we believe every pet deserves a loving home. What started as a small passion project has grown into a trusted online space for pet adoption. We connect kind-hearted people with cats, dogs, and rabbits looking for their forever families. Our team ensures each animal is healthy and well cared for.</p>
+            </article>
+            <article class="image-card">
+              <img src="media-file/Jenny-Img-Store.jpeg" alt="Jenny Store Image">
+            </article>
           </article>
-          <article class="price-card">
-            <h2 class="plan-header">DOG</h2>
-            <p class="card-text">
-              Loving, gentle, and caring. German Shepherd🐶 breed is the best to have and
-              will increase happiness tenfold.
-            </p>
-            <ul class="features">
-              <li>Super fun</li>
-              <li>Friends love them</li>
-              <li>Play games</li>
-              <li>Not a cat</li>
-              <li>Man's best friend</li>
-            </ul>
-            <p class="price">$150</p>
-            <a href="#" class="cta">Best Deal<i class="fa-solid fa-arrow-right"></i></a>
+          <article class="about mission">
+            <article class="about-content">
+              <h2 class="supporting-text">Our Mission</h2>
+              <p class="about-text">Our mission is simple: to make pet adoption easy, joyful, and ethical. We work closely with reputable shelters and caregivers to ensure every pet is safe and ready for a new beginning. At Jenny Store, we are not just placing animals—we are creating lifelong bonds between people and pets.</p>
+            </article>
+            <article class="image-card staff">
+              <img src="media-file/Jenny-Staff.jpeg" alt="Jenny Store Image">
+            </article>
           </article>
-          <article class="price-card">
-            <h2 class="plan-header">RABBIT</h2>
-            <p class="card-text">Buy our cute bunnies🐰 Adorable and easy to deal with.</p>
-            <ul class="features">
-              <li>Cheap 'n easy</li>
-              <li>Eat flakes</li>
-              <li>Replaceable</li>
-            </ul>
-            <p class="price">$20</p>
-            <a href="#" class="cta">Available</a>
+          <article class="about">
+            <article class="about-content">
+              <h2 class="supporting-text">Why Adopt From Us?</h2>
+              <p class="adopt">We care deeply about the wellbeing of animals. More importantly, our pets are health-checked and ready for a new home. Lastly, you are giving a pet a second chance at life.</p>
+              </article>
+              <article class="image-card">
+                <img src="media-file/Jenny-Img-Story.jpeg" alt="Jenny Store Image">
+            </article>
+          </article>
+          <article class="fun-fact">
+            <h2 class="supporting-text">Did You Know?</h2>
+            <p class="fun-text">Dogs can learn over 100 words and gestures with some breeds capable of assisting with tasks and therapy.</p>
           </article>
         </section>
-    </main>
+        <section class="container-contact">
+          <article class="contact-wrapper">
+            <article class="contact">
+                <h3>
+                  We are always interested in hearing about from our esteemed customers. So if you'd like to reach out to us, please do not hesitate.</h3>
+                <form action="https://formspree.io/f/xwpvdavg" method="POST">
+                    <input type="text" name="full-name" id="full-name" maxlength="30" placeholder="Full name" required>
+                    <input type="email" name="email" id="email" placeholder="Email address" required>
+                    <textarea type="text" name="info" id="info" maxlength="500" placeholder="Write me something..." required></textarea>
+                    <button type="submit">Get in touch</button>
+                </form>
+            </article>
+            <footer>
+                <article class="socials footer-links">
+                    <a href="https://github.com/Stevieron"><img src="./media-file/GitHub.png" alt="My-GitHub"></a>
+                    <a href="https://www.linkedin.com/in/stephenbassey/"><img src="./media-file/LinkedIn.png" alt="My-LinkedIn"></a>
+                    <a href="https://wellfound.com/profile/edit/overview"><img src="./media-file/Wellfound.png" alt="My-Wellfound"></a>
+                    <a href="https://x.com/stevieron?s=21"><img src="./media-file/X.png" alt="My-X"></a>
+                    <a href="https://medium.com/@stevenbassey07"><img src="./media-file/Medium.png" alt="My-Medium"></a>
+                </article>
+            </footer>
+          </article>
+      </section>    
+      </main>
   </body>
 </html>
