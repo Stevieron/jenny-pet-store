@@ -8,6 +8,7 @@ html {
   
   html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
   body {
@@ -69,22 +70,27 @@ ul li {
   }
 }
 
-header {
-   background: rgb(51, 51, 51, 0.4);
-   margin: 0 auto;
+.nav-wrapper {
+   background: rgb(51, 51, 51, 0.45);
 }
 
-header article {
+header {
+   margin: 0 auto;
+   padding: 0 7vw;
+}
+
+.nav-bar {
+   position: relative;
    display: flex;
    justify-content: space-between;
    align-items: center;
    width: 100%;
    height: 80px;
-   padding: 1em 5vw;
+   padding: 1em 0;
    color: white;
   }
 
-  header article a {
+  .nav-bar a {
    margin: 0;
    padding: 0;
    color:white;
@@ -92,25 +98,91 @@ header article {
 
 nav {
    display: flex;
+   align-items: center;
    justify-content: space-between;
+   gap: 1em;
 }
 
 .logo {
    width: 140px;
    height: 50px;
-   padding-left: 1.5em;
 }
 
-nav .menu {
-   display: block;
-   height: 4em;
-   width: 3em;
+.nav-links {
+  position: fixed;
+  top: -2.8%;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  list-style: none;
+  display: flex;
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.nav-links a{
+   text-decoration: none;
+   color: #f1f1f1;
+   font-weight: bold;
+   font-size: 17px;
+   transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+   text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+   color: #ffff0d;
+}
+
+.nav-links.open {
+  transform: translateX(0%);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+  .hamburger {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0;
+   background: none;
+   border: none;
    cursor: pointer;
+   z-index: 5;
 }
 
-.nav-links{
-   display: none;
+.icon-menu {
+  display: block;
+  transition: opacity 0.3s ease;
+  width: 55px;
+  height: 60px;
 }
+
+
+/* Initially show hamburger, hide close */
+.icon-close {
+   display: none;
+   transition: opacity 0.5s ease;
+   width: 20px;
+   height: 20px;
+}
+
+.hamburger.open .icon-menu {
+  display: none;
+}
+
+.hamburger.open .icon-close {
+  display: block;
+}
+
 
 /* Hero Section */
 main {
@@ -118,8 +190,6 @@ main {
 }
 
 .headline {
-   /* display: flex;
-   flex-direction: column; */
    min-height: 640px;
    height: auto;
    padding: 5% 7vw 7% 7vw;
@@ -163,7 +233,6 @@ main {
 }
 
 button {
-   height: 3em;
    border: none;
    border-radius: 30px;
    outline: none;
@@ -292,7 +361,7 @@ button {
     padding:10px;
     margin-bottom: 0.5em;
     color:black;
-    border-radius:6px;
+    border-radius:30px;
     min-width: 60%;
   }
 
@@ -452,21 +521,40 @@ footer {
    }
 }
 
+@media (max-width: 869px) {
+  .nav-links {
+    visibility: hidden;
+  }
+
+  .nav-links.open {
+    visibility: visible;
+  }
+}
+
+
 @media (min-width: 870px) {
-   .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 40px;
+   .hamburger {
+      display: none;
    }
 
-   .nav-links li {
-   display: inline;
-}
+   .nav-links {
+      display: flex !important;
+      position: static;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 3em;
+      background: transparent;
+      list-style: none;
+      height: auto;
+      width: auto;
+      transform: none;
+      opacity: 1;
+      pointer-events: auto;
+   }
 
 .nav-links a{
    text-decoration: none;
-   color: #FFFFFF;
-   padding: 1em;
+   color: #fff;
    font-weight: bold;
    font-size: 17px;
    transition: color 0.3s ease;
@@ -474,11 +562,6 @@ footer {
 .nav-links a:hover {
    color: #ffff0d;
 }
-
-nav .menu {
-   display: none;
-   font-size: 1.7em;
- }
 
 .price-card {
       max-width: 630px;
@@ -577,19 +660,23 @@ nav .menu {
       max-width: 22vw;
    }
 
-   header article {
+   header {
+      max-width: 1500px;
+   }
+
+   .nav-bar {
+      max-width: 1500px;
       margin: 0 auto;
-      max-width: 1470px;
    }
 
    .headline, .about-page, .contact-wrapper {
       margin: 0 auto;
-      max-width: 1470px;
+      max-width: 1500px;
    }
 
    .pricing-grid {
       margin: 0 auto;
-      max-width: 1470px;
+      max-width: 1500px;
       gap: 3em;
    }
 }

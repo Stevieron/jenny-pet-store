@@ -7,26 +7,32 @@
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.7.2/css/all.css">
     <title>Jenny Pet</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <header class="nav-bar">
-      <article>
-        <a href="index.html">
-          <img src="./media-file/Jenny-Img-Logo.png" class="logo" alt="logo">
-        </a>
-        <nav>
-          <img class="menu" src="./media-file/Enabled.png" alt="menu button">
-          <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Store</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </article>
-    </header>
+    <section class="nav-wrapper">
+      <header>
+        <article class="nav-bar">
+          <a href="#home">
+            <img src="./media-file/Jenny-Img-Logo.png" class="logo" alt="logo">
+          </a>
+          <nav>
+            <button class="hamburger" aria-label="Toggle menu">
+              <img src="./media-file/Enabled.png" alt="Menu Icon" class="icon-menu" />
+              <img src="./media-file/Close.png" alt="Close icon" class="icon-close" />
+            </button>
+            <ul class="nav-links">
+              <li><a href="#home">HOME</a></li>
+              <li><a href="#store">STORE</a></li>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+          </nav>
+        </article>
+      </header>
+    </section>
       <main>
-        <section class="headline">
+        <section id="home" class="headline">
           <h1 class="primary-text">
             <strong>Adopt Now.</strong>
             <strong>At Jenny Store.</strong>
@@ -35,7 +41,7 @@
           <p class="description">Looking for a furry friend? Browse our pet store for the best deals on adorable dogs, cats, and rabbits.Your next companion is just a click away!</p>
           <button type="button">More Info</button>
         </section>
-        <section class="pricing">
+        <section id="store" class="pricing">
           <h2 class="pricing-title">Pick your perfect pal</h2>
           <p class="subtext">All pets are vaccinated and come with starter kits!</p>
           <section class="pricing-grid">
@@ -86,7 +92,7 @@
           </section>
         </section>
         <!-- About -->
-        <section class="about-page">
+        <section id="about" class="about-page">
           <article class="about">
             <article class="about-content">
               <h1 class="primary-text">About Us</h1>
@@ -119,7 +125,7 @@
             <p class="fun-text">Dogs can learn over 100 words and gestures with some breeds capable of assisting with tasks and therapy.</p>
           </article>
         </section>
-        <section class="container-contact">
+        <section id="contact" class="container-contact">
           <article class="contact-wrapper">
             <article class="contact">
                 <h3>
