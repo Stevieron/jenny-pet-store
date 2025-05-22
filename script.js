@@ -13,12 +13,12 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
     }
+
     links.classList.toggle("open");
     hamburger.classList.toggle("open");
   });
 });
 
-// Toggle class for menu dropdown
 menuBtn.addEventListener("click", () => {
   links.classList.toggle("open");
   hamburger.classList.toggle("open");
@@ -27,7 +27,7 @@ menuBtn.addEventListener("click", () => {
 document.addEventListener("click", (e) => {
   const isClickInsideNav =
     hamburger.contains(e.target) || links.contains(e.target);
-  // Areas outside navLinks and menu icon close menu dropdown
+
   if (!isClickInsideNav) {
     links.classList.remove("open");
     hamburger.classList.remove("open");
@@ -42,24 +42,20 @@ let currentPhrase = [];
 let isDeleting = false;
 let isEnd = false;
 
-// Try typing each phrase at a time
 function loopTyping() {
   heroText.textContent = currentPhrase.join("");
 
-  // To type letters
   if (i < phrases.length) {
     if (!isDeleting && j < phrases[i].length) {
       currentPhrase.push(phrases[i][j]);
       j++;
       heroText.textContent = currentPhrase.join("");
     } else if (isDeleting && j > 0) {
-      //if there is at least one more letter left to delete
       currentPhrase.pop();
       j--;
       heroText.textContent = currentPhrase.join("");
     }
 
-    // Pause 1.2secs at the end of each phrase & re-invoke after every 1.2secs
     if (!isDeleting && j === phrases[i].length) {
       isEnd = true;
       isDeleting = true;
@@ -67,7 +63,6 @@ function loopTyping() {
       return;
     }
 
-    // Move to the next phrase after del last char(j) of current phrase[i]
     if (isDeleting && j === 0) {
       isDeleting = false;
       i = (i + 1) % phrases.length;
@@ -75,7 +70,20 @@ function loopTyping() {
   }
 
   const speed = isEnd ? 100 : isDeleting ? 20 : 100;
-  setTimeout(loopTyping, speed); //Sets typing and deletion speed
+  setTimeout(loopTyping, speed);
 }
 
 loopTyping();
+
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 700) {
+    backToTop.classList.add("show");
+  } else {
+    backToTop.classList.remove("show");
+  }
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
