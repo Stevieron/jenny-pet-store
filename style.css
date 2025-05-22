@@ -1,20 +1,18 @@
 html {
     box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
   }
   
   *, *:before, *:after {
     box-sizing: inherit;
   }
   
-  html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-
   body {
+    min-width: 375px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: rgba(255, 255, 255, 0.8);
-    margin: 0;
+    margin: 0 auto;
     background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
   }
 
@@ -71,10 +69,13 @@ ul li {
 }
 
 .nav-wrapper {
+   min-width: 375px;
    background: rgb(51, 51, 51, 0.45);
+   width: 100%;
 }
 
 header {
+   min-width: 375px;
    margin: 0 auto;
    padding: 0 7vw;
 }
@@ -180,7 +181,7 @@ nav {
 }
 
 .hamburger.open .icon-close {
-  display: block;
+   display: block;
 }
 
 
@@ -190,6 +191,7 @@ main {
 }
 
 .headline {
+   min-width: 375px;
    min-height: 640px;
    height: auto;
    padding: 10% 7vw 7% 7vw;
@@ -200,7 +202,7 @@ main {
 }
 
 .primary-text {
-   margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
   font-weight: 400px;
   font-size: 3.5rem;
   line-height: 70px;
@@ -221,6 +223,12 @@ main {
   50% { opacity: 0; }
 }
 
+@media (max-width: 640px) {
+   .headline h1 {
+      min-height: 140px;
+   }
+}
+
 
 .supporting-text {
   margin: 0;
@@ -233,7 +241,7 @@ main {
 }
 
 .description {
-   margin: 0;
+  margin: 0;
   font-family: "Poppins", "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -244,13 +252,13 @@ main {
 }
 
 button {
-   border: none;
-   border-radius: 30px;
-   outline: none;
-   padding: 1em 2.7em;
-   background-color: #ffff0d;
-   color: #000000;
-   font-family: 'Inter', sans-serif;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  padding: 1em 2.7em;
+  background-color: #ffff0d;
+  color: #000000;
+  font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
@@ -259,9 +267,10 @@ button {
 
 /* Pricing Section */
 .pricing {
-   background-color: #000000;
-   height: auto;
-   padding: 2% 0;
+  min-width: 375px;
+  background-color: #000000;
+  height: auto;
+  padding: 6% 7vw;
 }
 
 .pricing-title {
@@ -280,26 +289,26 @@ button {
 }
 
 .pricing-grid {
-   padding: 4% 7vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 3em;
+  padding: 4% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3em;
 }
 
 .price-card {
-   width: 100%;
-    padding: 1em;
-    background: rgba(255, 255, 255, 0.07);
-    border-radius: 7px;
-    text-align: center;
-    transition: .4s ease;
+  width: 100%;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 7px;
+  text-align: center;
+  transition: .4s ease;
 
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .price-card:hover {
@@ -307,8 +316,8 @@ button {
 }
 
 .price-card .plan-header {
-    color: #cccccc;
-    margin: 0.3em auto;
+   color: #cccccc;
+   margin: 0.3em auto;
 }
 
 .price-card p {
@@ -316,12 +325,12 @@ button {
 }
 
 .price-card ul {
-    list-style: none;
-    padding-bottom: 0.7em;
+   list-style: none;
+   padding-bottom: 0.7em;
 }
 .price-card ul li {
-    color: #cccccc;
-    text-align: left;
+   color: #cccccc;
+   text-align: left;
 }
 
 .tick {
@@ -366,14 +375,14 @@ button {
 }
 
 .price-card a {
-    text-decoration: none;
-    font-weight: 700;
-    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
-    padding:10px;
-    margin-bottom: 0.5em;
-    color:black;
-    border-radius:30px;
-    min-width: 60%;
+   text-decoration: none;
+   font-weight: 700;
+   background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+   padding: 1em 2.7em;
+   margin-bottom: 0.5em;
+   color:black;
+   border-radius:30px;
+   min-width: 60%;
   }
 
 .cta {
@@ -382,7 +391,8 @@ button {
 
 /* About */
 .about-page {
-   padding: 1em 7vw 2em 7vw;
+   min-width: 375px;
+   padding: 1.4em 7vw 2em 7vw;
    text-align: center;
    height: auto;
 }
@@ -436,43 +446,43 @@ button {
 
 /* Contact */
 .container-contact {
-  background-color: #000000;
-  min-width: 375px;
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 10%;
+   background-color: #000000;
+   min-width: 375px;
+   width: 100%;
+   margin: 0 auto;
+   padding-top: 6%;
 }
 
 .contact {
-  display: flex;
-  padding: 4em 7vw 1em 7vw;
-  flex-direction: column;
-  gap: 2em;
-  max-width: 1800px;
-  margin: auto;
+   display: flex;
+   padding: 0 7vw 1em 7vw;
+   flex-direction: column;
+   gap: 2em;
+   max-width: 1500px;
+   margin: auto;
 }
 
 .contact h3 {
-  font-family: 'Inter', sans-serif;
-  font-size: 2.2rem;
-  font-weight: bold;
-  line-height: 44px;
-  color: #fff5e1;
-  text-align: center;
-  margin-bottom: 2em;
+   font-family: 'Inter', sans-serif;
+   font-size: 2.2rem;
+   font-weight: bold;
+   line-height: 44px;
+   color: #fff5e1;
+   text-align: center;
+   margin-bottom: 2em;
 }
 
 .contact input {
-  width: 100%;
-  height: 3em;
-  padding: 1.5em 1em;
-  margin-bottom: 1em;
-  border: none;
-  border-bottom: 2px solid #cccccc;
-  background: none;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  color: #fff5e1;
+   width: 100%;
+   height: 3em;
+   padding: 1.5em 1em;
+   margin-bottom: 1em;
+   border: none;
+   border-bottom: 2px solid #cccccc;
+   background: none;
+   font-family: 'Inter', sans-serif;
+   font-size: 1rem;
+   color: #fff5e1;
 }
 
 form textarea {
@@ -493,6 +503,48 @@ form textarea {
   margin: 1em auto;
   background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
 }
+
+#backToTop {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: column;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  background: #ffff0d;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.1em;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+#backToTop:hover {
+  transform: scale(1.04);
+}
+
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#backToTop p {
+   margin: 0;
+   padding-bottom: 0.1em;
+   font-size: 2.5em;
+}
+
 
 footer {
   margin-top: 3em;
@@ -676,7 +728,7 @@ footer {
       max-width: 25vw;
    }
 
-   header {
+   header, .top {
       max-width: 1500px;
    }
 
