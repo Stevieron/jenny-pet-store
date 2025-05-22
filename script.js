@@ -33,3 +33,49 @@ document.addEventListener("click", (e) => {
     hamburger.classList.remove("open");
   }
 });
+
+const heroText = document.getElementById("typewriter");
+const phrases = ["Adopt at Jenny.", "Find a furry friend.", "Give it a home."];
+let i = 0;
+let j = 0;
+let currentPhrase = [];
+let isDeleting = false;
+let isEnd = false;
+
+// Try typing each phrase at a time
+function loopTyping() {
+  heroText.textContent = currentPhrase.join("");
+
+  // To type letters
+  if (i < phrases.length) {
+    if (!isDeleting && j < phrases[i].length) {
+      currentPhrase.push(phrases[i][j]);
+      j++;
+      heroText.textContent = currentPhrase.join("");
+    } else if (isDeleting && j > 0) {
+      //if there is at least one more letter left to delete
+      currentPhrase.pop();
+      j--;
+      heroText.textContent = currentPhrase.join("");
+    }
+
+    // Pause 1.2secs at the end of each phrase & re-invoke after every 1.2secs
+    if (!isDeleting && j === phrases[i].length) {
+      isEnd = true;
+      isDeleting = true;
+      setTimeout(loopTyping, 1400);
+      return;
+    }
+
+    // Move to the next phrase after del last char(j) of current phrase[i]
+    if (isDeleting && j === 0) {
+      isDeleting = false;
+      i = (i + 1) % phrases.length;
+    }
+  }
+
+  const speed = isEnd ? 100 : isDeleting ? 20 : 100;
+  setTimeout(loopTyping, speed); //Sets typing and deletion speed
+}
+
+loopTyping();

@@ -192,7 +192,7 @@ main {
 .headline {
    min-height: 640px;
    height: auto;
-   padding: 5% 7vw 7% 7vw;
+   padding: 10% 7vw 7% 7vw;
    background-image: url('./media-file/dog-background.png');
    background-repeat: no-repeat;
    background-position: 100% 100%;
@@ -207,9 +207,20 @@ main {
   color: #ffff0d;
 }
 
-.primary-text strong {
-   display: block;
+#typewriter::after {
+  content: "|";
+  position: relative;
+  top: 0;
+  right: 0.7%;
+  animation: blink 0.7s infinite;
+  color: #ffff0d;
 }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 
 .supporting-text {
   margin: 0;
@@ -572,8 +583,8 @@ footer {
 /* Desktop */
 @media (min-width: 1024px) {
    .headline {
-      background-position: 99% 50%;
-      background-size: 49% 80%;
+      background-position: 100% 100%;
+      background-size: 31% 38%;  
    }
 
    .description {
@@ -639,10 +650,15 @@ footer {
 
 }
 
-@media (min-width: 1258px) {
+@media (min-width: 1260px) {
    .headline {
-      background-position: 95% 50%;
+      background-position: 100% 30%;
       background-size: 44% 80%;
+   }
+
+   
+   h1 {
+      max-width: 49vw;
    }
    
    .pricing-grid {
@@ -657,7 +673,7 @@ footer {
 
 @media (min-width: 1500px) {
    .headline .description {
-      max-width: 22vw;
+      max-width: 25vw;
    }
 
    header {
